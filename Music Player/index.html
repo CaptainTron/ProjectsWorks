@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music Player</title>
+    <link rel="stylesheet" href="./index.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://kit.fontawesome.com/05783f0d11.js" crossorigin="anonymous"></script>
+</head>
+<body>
+
+    <div class="music">
+
+        <!-- Image Container goes here -->
+        <div class="Music_Container">
+            <div class="imgcontainer">
+                <img src="./2.jpeg">
+            </div>
+
+            <!--Text Information about Image  -->
+            <div class="txtcontainer">
+                <h3>Adiyogi</h3>
+                <p>Music Song</p>
+            </div>
+
+            <!-- Music Control goes here -->
+            <div class="Musicslider">
+                <input type="range" step="3" class="Musicseekbar" value="50" min="0" max="100" oninput="Music2.volume = this.value/100">
+            </div>
+
+            <div class="icon">
+                <div class="heartbtn">
+                    <i class="fa-solid fa-heart"></i>
+                </div>
+                <div class="volume">
+                    <i class="fas fa-volume-up"></i>
+                </div>
+            </div>
+
+            <!-- Music Progress Bar Goes Here -->
+            <div class="progressbar">
+                <input type="range" step="1" class="PrograssSeeker" value="0" min="0" max="100" oninput="ProgessBar()">
+            </div>
+
+            
+            <!-- Current Song Status App -->
+            <div class="currentstatus">
+                <!-- Progress Time -->
+            <div class="progressTime">
+                <h5 id="STime">00:00</h5>
+            </div>
+            <!-- Total Time -->
+            <div class="totalTime">
+                <h5 id="ETime">00:00</h5>
+            </div>
+            </div>
+
+            <!-- Music Controller -->
+            <div class="music_controller">
+                <div class="prev"><i class="fa-solid fa-backward"></i></div>
+                <div class="stop_play"><i class="fa fa-stop" aria-hidden="true"></i></div>
+                <div class="next"><i class="fa-solid fa-forward"></i></div>
+            </div>
+            <!-- sound -->
+            <!-- audio Files goes here -->
+            <audio class="One"><source src="./1.mp3" type="audio/mp3"></audio>
+            <audio class="two"><source src="./2.mp3" type="audio/mp3"></audio>
+        </div>    
+        
+    </div>
+
+
+    <script src="./index.js"></script>
+</body>
+</html>
